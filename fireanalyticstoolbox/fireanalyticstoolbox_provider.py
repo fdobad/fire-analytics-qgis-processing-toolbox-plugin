@@ -34,6 +34,7 @@ from qgis.core import QgsProcessingProvider
 from qgis.PyQt.QtGui import QIcon
 
 from .algorithm_clusterize import ClusterizeAlgorithm
+from .algorithm_firescarmapper import FireScarMapper
 from .algorithm_instance_downloader import InstanceDownloader
 from .algorithm_knapsack import PolygonKnapsackAlgorithm, RasterKnapsackAlgorithm
 from .algorithm_postsimulation import (BetweennessCentralityMetric, DownStreamProtectionValueMetric,
@@ -79,6 +80,7 @@ class FireToolboxProvider(QgsProcessingProvider):
         self.addAlgorithm(DownStreamProtectionValueMetric())
         self.addAlgorithm(RasterTutorial())
         self.addAlgorithm(InstanceDownloader())
+        self.addAlgorithm(FireScarMapper())
 
     def id(self):
         """
